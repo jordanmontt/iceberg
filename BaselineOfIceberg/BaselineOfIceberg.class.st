@@ -28,11 +28,13 @@ BaselineOfIceberg >> baseline: spec [
 			package: 'Iceberg-Plugin-Migration' with: [ spec requires: #('Iceberg-Plugin') ];
 			package: 'Iceberg-Metacello-Integration' with: [ spec requires: #('Iceberg')];
 			package: 'Iceberg-TipUI' with: [ spec requires: #('Iceberg') ];
+			package: 'Iceberg-TipUi-SnapshotBrowser';
 			package: 'Iceberg-Memory' with: [ spec requires: #('Iceberg') ];
 			"tests"
 			package: 'Iceberg-Tests' with: [ spec requires: #('Iceberg' 'Iceberg-Memory') ];
 			package: 'Iceberg-Tests-MetacelloIntegration' with: [ spec requires: #('Iceberg-Tests') ];
 			package: 'Iceberg-UI-Tests' with: [ spec requires: #('Iceberg-TipUI' 'Iceberg-Tests')];
+			package: 'Iceberg-TipUi-SnapshotBrowser-Tests' with: [ spec requires: #( 'Iceberg-TipUi-SnapshotBrowser' ) ];
 			package: 'Iceberg-Plugin-Migration-Tests' with: [ spec requires: #('Iceberg-Plugin-Migration' 'Iceberg-Tests') ];
 			"libgit"
 			package: 'Iceberg-Libgit' with: [ spec requires: #('Iceberg' 'LibGit') ];
@@ -43,6 +45,7 @@ BaselineOfIceberg >> baseline: spec [
 				minimal 
 				'Iceberg-Metacello-Integration' 
 				'Iceberg-TipUI'
+				'Iceberg-TipUi-SnapshotBrowser'
 				'Iceberg-Plugin' 
 				'Iceberg-Plugin-Metacello'
 				'Iceberg-Plugin-GitHub'
@@ -58,6 +61,7 @@ BaselineOfIceberg >> baseline: spec [
 				'Iceberg-Tests-MetacelloIntegration'
 				'LibGit-Tests' 
 				'Iceberg-UI-Tests'
+				'Iceberg-TipUi-SnapshotBrowser-Tests'
 				'Iceberg-Plugin-Migration-Tests' );
 			group: 'development' with: #(default allTests) ].
 
