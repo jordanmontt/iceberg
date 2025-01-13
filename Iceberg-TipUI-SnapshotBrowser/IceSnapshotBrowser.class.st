@@ -84,6 +84,12 @@ IceSnapshotBrowser class >> buildCommandsGroupWith: presenterInstance forRoot: r
 					  yourself)
 ]
 
+{ #category : 'accessing' }
+IceSnapshotBrowser class >> defaultPreferredExtent [
+
+	^ 650 @ 400
+]
+
 { #category : 'instance creation' }
 IceSnapshotBrowser class >> forSnapshot: aMCSnapshot [
 

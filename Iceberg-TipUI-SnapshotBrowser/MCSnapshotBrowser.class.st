@@ -250,7 +250,8 @@ MCSnapshotBrowser >> classSelection: aNumber [
 
 { #category : 'morphic ui' }
 MCSnapshotBrowser >> close [
-	self window delete
+
+	self window ifNotNil: [ :w | w delete ]
 ]
 
 { #category : 'menus' }
@@ -329,11 +330,6 @@ MCSnapshotBrowser >> fileOutMessage [
 { #category : 'accessing' }
 MCSnapshotBrowser >> hasExtensions [
 	^self extensionClassNames notEmpty
-]
-
-{ #category : 'morphic ui' }
-MCSnapshotBrowser >> initialExtent [
-	^ 650@400.
 ]
 
 { #category : 'menus' }
