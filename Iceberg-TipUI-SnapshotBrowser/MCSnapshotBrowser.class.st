@@ -29,14 +29,6 @@ MCSnapshotBrowser >> accept [
 	" do nothing by default"
 ]
 
-{ #category : 'accessing' }
-MCSnapshotBrowser >> allClassNames [
-	^ (items 
-		select: [:ea | (ea isOrganizationDefinition | ea isScriptDefinition) not]
-		thenCollect: [:ea | ea className]) asSet.
-
-]
-
 { #category : 'morphic ui' }
 MCSnapshotBrowser >> arrowKey: aCharacter from: aPluggableListMorph [ 
 	"backstop"
@@ -268,70 +260,6 @@ MCSnapshotBrowser >> defaultLabel [
 	^ 'Snapshot Browser'
 ]
 
-{ #category : 'accessing' }
-MCSnapshotBrowser >> extensionClassNames [
-	^ (self allClassNames difference: self packageClassNames) asSortedCollection
-]
-
-{ #category : 'accessing' }
-MCSnapshotBrowser >> extensionsCategory [
-	^ '*Extensions'
-]
-
-{ #category : 'menus' }
-MCSnapshotBrowser >> fileOutMessage [
-	"Put a description of the selected message on a file"
-
-	| fileName |
-	self selectedMessageName ifNotNil: [
-		Cursor write showWhile: [
-			self selectedClassOrMetaClass fileOutMethod:
-				self selectedMessageName ].
-		^ self ].
-	items isEmpty ifTrue: [ ^ self ].
-	fileName := MorphicUIManager new
-		            request: 'File out on which file?'
-		            initialAnswer: 'methods'.
-	Cursor write showWhile: [
-		| internalStream |
-		internalStream := WriteStream on: (String new: 1000).
-		internalStream
-			header;
-			timeStamp.
-		items do: [ :patchOp |
-			patchOp definition isMethodDefinition ifTrue: [
-				(patchOp definition actualClass isNotNil and: [
-					 patchOp definition actualClass includesSelector:
-						 patchOp definition selector ])
-					ifTrue: [
-						patchOp definition actualClass
-							printMethodChunk: patchOp definition selector
-							on: internalStream ]
-					ifFalse: [
-						internalStream nextChunkPut:
-							patchOp definition className , ' removeSelector: '
-							, patchOp definition selector printString ] ].
-			patchOp definition isClassDefinition ifTrue: [
-				patchOp definition actualClass
-					ifNotNil: [
-						internalStream nextChunkPut:
-							patchOp definition actualClass definition.
-						patchOp definition comment ifNotNil: [
-							patchOp definition actualClass putCommentOnFile: internalStream ] ]
-					ifNil: [
-						internalStream nextChunkPut:
-							patchOp definition className , ' removeFromSystem' ] ] ].
-		CodeExporter
-			writeSourceCodeFrom: internalStream
-			baseName: fileName
-			isSt: true ]
-]
-
-{ #category : 'accessing' }
-MCSnapshotBrowser >> hasExtensions [
-	^self extensionClassNames notEmpty
-]
-
 { #category : 'menus' }
 MCSnapshotBrowser >> inspectSelection [
 	^ self methodSelection inspect
@@ -496,15 +424,6 @@ MCSnapshotBrowser >> methodsForSelectedClass [
 ]
 
 { #category : 'accessing' }
-MCSnapshotBrowser >> methodsForSelectedClassCategory [
-	| visibleClasses |
-	visibleClasses := self visibleClasses.
-	^ items select: [:ea | (visibleClasses includes: ea className) 
-								and: [ea isMethodDefinition
-									and: [ea classIsMeta = self switchIsClass]]].
-]
-
-{ #category : 'accessing' }
 MCSnapshotBrowser >> methodsForSelectedProtocol [
 	| methods |
 	protocolSelection ifNil: [^ Array new].
@@ -514,21 +433,6 @@ MCSnapshotBrowser >> methodsForSelectedProtocol [
 	^ methods 
 	
 								
-]
-
-{ #category : 'accessing' }
-MCSnapshotBrowser >> packageClassNames [
-	^ self packageClasses collect: [:ea | ea className]
-]
-
-{ #category : 'accessing' }
-MCSnapshotBrowser >> packageClasses [
-	^ items select: [:ea | ea isClassDefinition]
-]
-
-{ #category : 'listing' }
-MCSnapshotBrowser >> packageOrganizations [
-	^ items select: [:ea | ea isOrganizationDefinition]
 ]
 
 { #category : 'morphic ui' }
@@ -725,14 +629,6 @@ MCSnapshotBrowser >> textMorph: aSymbol [
 	textMorph announcer when: RubTextAcceptRequest send: #accept to: self.
 	textMorph hasUnacceptedEdits: false.
 	^ textMorph
-]
-
-{ #category : 'listing' }
-MCSnapshotBrowser >> visibleCategories [
-	^ ((self packageOrganizations flatCollect: [ :ea | ea categories ]),
-		(self packageClasses collect: [ :ea | ea category ]),
-			(self hasExtensions ifTrue: [{ self extensionsCategory }] ifFalse: [#()]))
-				asSet asSortedCollection
 ]
 
 { #category : 'listing' }
