@@ -1,3 +1,6 @@
+"
+I am a command to load a class in the snapshot browser.
+"
 Class {
 	#name : 'IceSBLoadClassCommand',
 	#superclass : 'IceSBBrowserAbstractClassCommand',

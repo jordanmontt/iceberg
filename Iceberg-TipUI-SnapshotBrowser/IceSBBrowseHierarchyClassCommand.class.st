@@ -1,3 +1,6 @@
+"
+I am a command to browse the hierarchy of a class.
+"
 Class {
 	#name : 'IceSBBrowseHierarchyClassCommand',
 	#superclass : 'IceSBBrowserAbstractClassCommand',

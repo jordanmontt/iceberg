@@ -1,3 +1,6 @@
+"
+I am a command to be able to browse the implementors of a method.
+"
 Class {
 	#name : 'IceSBBrowseMethodImplementorsCommand',
 	#superclass : 'IceSBBrowserAbstractMethodCommand',

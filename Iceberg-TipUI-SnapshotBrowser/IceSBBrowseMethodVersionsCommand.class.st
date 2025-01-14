@@ -1,3 +1,6 @@
+"
+I am a command to see different versions of a method
+"
 Class {
 	#name : 'IceSBBrowseMethodVersionsCommand',
 	#superclass : 'IceSBBrowserAbstractMethodCommand',

@@ -1,3 +1,6 @@
+"
+I am a command to browse a method from the snapshot browser.
+"
 Class {
 	#name : 'IceSBBrowseFullMethodCommand',
 	#superclass : 'IceSBBrowserAbstractMethodCommand',

@@ -1,3 +1,6 @@
+"
+I am an abstract class to manage the snapshot browser commands about classes.
+"
 Class {
 	#name : 'IceSBBrowserAbstractClassCommand',
 	#superclass : 'IceSnapshotBrowserCommand',

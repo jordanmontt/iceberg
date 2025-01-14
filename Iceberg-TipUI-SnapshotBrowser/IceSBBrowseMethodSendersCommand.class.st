@@ -1,3 +1,6 @@
+"
+I am a command to be able to see the senders of a method in the snapshot browser
+"
 Class {
 	#name : 'IceSBBrowseMethodSendersCommand',
 	#superclass : 'IceSBBrowserAbstractMethodCommand',

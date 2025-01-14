@@ -1,3 +1,8 @@
+"
+I am a common superclass for all the commands of the Snapshot browser. 
+
+Probably we could reuse some of the Iceberg commands instead of those, we should iterate.
+"
 Class {
 	#name : 'IceSnapshotBrowserCommand',
 	#superclass : 'CmCommand',

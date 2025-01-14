@@ -1,3 +1,6 @@
+"
+I am a method to be able to see a method inheritance hierarchy
+"
 Class {
 	#name : 'IceSBBrowseMethodInheritanceCommand',
 	#superclass : 'IceSBBrowserAbstractMethodCommand',

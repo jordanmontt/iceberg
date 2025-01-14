@@ -1,3 +1,6 @@
+"
+I am a command used to browse a selected class of the snapshot browser.
+"
 Class {
 	#name : 'IceSBBrowseFullClassCommand',
 	#superclass : 'IceSBBrowserAbstractClassCommand',

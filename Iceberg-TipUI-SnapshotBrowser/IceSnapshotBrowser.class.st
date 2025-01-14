@@ -1,3 +1,8 @@
+"
+I am a browser to be able to browse the code of a Monticello snapshot. 
+
+I am made with the Spec framework.
+"
 Class {
 	#name : 'IceSnapshotBrowser',
 	#superclass : 'StPresenter',

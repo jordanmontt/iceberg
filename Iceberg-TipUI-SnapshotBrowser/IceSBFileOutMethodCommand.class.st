@@ -1,3 +1,6 @@
+"
+I am a command to file out a method in the snapshot browser.
+"
 Class {
 	#name : 'IceSBFileOutMethodCommand',
 	#superclass : 'IceSBBrowserAbstractMethodCommand',

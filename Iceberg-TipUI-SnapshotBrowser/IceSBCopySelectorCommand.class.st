@@ -1,3 +1,6 @@
+"
+I am a command to copy the selector of a method in the snapshot browser.
+"
 Class {
 	#name : 'IceSBCopySelectorCommand',
 	#superclass : 'IceSBBrowserAbstractMethodCommand',

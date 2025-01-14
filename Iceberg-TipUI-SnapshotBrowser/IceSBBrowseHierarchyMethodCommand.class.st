@@ -1,3 +1,6 @@
+"
+I am a command to be able to see the hierarchy of a method.
+"
 Class {
 	#name : 'IceSBBrowseHierarchyMethodCommand',
 	#superclass : 'IceSBBrowserAbstractMethodCommand',

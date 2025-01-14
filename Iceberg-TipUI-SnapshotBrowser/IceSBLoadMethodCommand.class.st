@@ -1,3 +1,6 @@
+"
+I am a command to load a method from the Snapshot browser
+"
 Class {
 	#name : 'IceSBLoadMethodCommand',
 	#superclass : 'IceSBBrowserAbstractMethodCommand',
