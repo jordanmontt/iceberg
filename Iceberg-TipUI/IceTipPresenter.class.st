@@ -50,12 +50,6 @@ IceTipPresenter >> setInitialExtentTo: aSpWindowPresenter [
 	aSpWindowPresenter initialExtent: self initialExtentForWindow
 ]
 
-{ #category : 'initialization' }
-IceTipPresenter >> setTitleTo: aSpWindowPresenter [
-
-	aSpWindowPresenter title: self windowTitle
-]
-
 { #category : 'extensions' }
 IceTipPresenter >> updateTitle [
 	
