@@ -66,12 +66,6 @@ IceTipAddNewPackagesDialogPresenter >> defaultLayout [
 ]
 
 { #category : 'initialization' }
-IceTipAddNewPackagesDialogPresenter >> iconForWindow [
-
-	^ self iconNamed: #branch
-]
-
-{ #category : 'initialization' }
 IceTipAddNewPackagesDialogPresenter >> initializePackagesList [
 
 	packagesList
@@ -141,12 +135,6 @@ IceTipAddNewPackagesDialogPresenter >> setModelBeforeInitialization: somePackage
 ]
 
 { #category : 'initialization' }
-IceTipAddNewPackagesDialogPresenter >> titleForWindow [ 
-
-	^ 'Select New Packages to Load'.
-]
-
-{ #category : 'initialization' }
 IceTipAddNewPackagesDialogPresenter >> updatePresenter [
 
 	packagesList items: packages
@@ -158,4 +146,16 @@ IceTipAddNewPackagesDialogPresenter >> validate [
 	self
 		assert: self selectedPackage isNotNil
 		description: 'Please select a branch to checkout.'
+]
+
+{ #category : 'initialization' }
+IceTipAddNewPackagesDialogPresenter >> windowIcon [
+
+	^ self iconNamed: #branch
+]
+
+{ #category : 'initialization' }
+IceTipAddNewPackagesDialogPresenter >> windowTitle [ 
+
+	^ 'Select New Packages to Load'.
 ]

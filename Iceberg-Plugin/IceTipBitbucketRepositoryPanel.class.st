@@ -21,12 +21,6 @@ IceTipBitbucketRepositoryPanel >> configureBuilder: aBuilder [
 	aBuilder beBitbucket
 ]
 
-{ #category : 'initialization' }
-IceTipBitbucketRepositoryPanel >> iconForWindow [
-
-	^ self iconNamed: #bitbucket
-]
-
 { #category : 'accessing' }
 IceTipBitbucketRepositoryPanel >> providerName [
 
@@ -34,7 +28,13 @@ IceTipBitbucketRepositoryPanel >> providerName [
 ]
 
 { #category : 'initialization' }
-IceTipBitbucketRepositoryPanel >> titleForWindow [
+IceTipBitbucketRepositoryPanel >> windowIcon [
+
+	^ self iconNamed: #bitbucket
+]
+
+{ #category : 'initialization' }
+IceTipBitbucketRepositoryPanel >> windowTitle [
 
 	^ 'Clone from bitbucket.org'
 ]

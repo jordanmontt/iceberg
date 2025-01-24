@@ -147,7 +147,7 @@ IceTipFiletreeToTonelDialogPresenter >> setModelBeforeInitialization: anObject [
 ]
 
 { #category : 'initialization' }
-IceTipFiletreeToTonelDialogPresenter >> titleForWindow [
+IceTipFiletreeToTonelDialogPresenter >> windowTitle [
 
 	^ 'Convert sources to tonel'
 ]

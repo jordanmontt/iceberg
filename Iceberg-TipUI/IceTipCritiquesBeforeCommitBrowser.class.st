@@ -249,14 +249,6 @@ IceTipCritiquesBeforeCommitBrowser >> setModelBeforeInitialization: someNodes [
 ]
 
 { #category : 'initialization' }
-IceTipCritiquesBeforeCommitBrowser >> titleForWindow [
-
-	^ 'Critiques for Commit on {1} branch {2}' format: { 
-			  commitModel repositoryModel name.
-			  commitModel repositoryModel branchName }
-]
-
-{ #category : 'initialization' }
 IceTipCritiquesBeforeCommitBrowser >> updatePresenter [ 
 
 	super updatePresenter.
@@ -283,4 +275,12 @@ IceTipCritiquesBeforeCommitBrowser >> updateSelectedCritique [
 			detailPanel text: aCritique description.
 			autofixButton enabled: (aCritique providesChange).
 			browseButton enabled: true ]
+]
+
+{ #category : 'initialization' }
+IceTipCritiquesBeforeCommitBrowser >> windowTitle [
+
+	^ 'Critiques for Commit on {1} branch {2}' format: { 
+			  commitModel repositoryModel name.
+			  commitModel repositoryModel branchName }
 ]

@@ -52,12 +52,6 @@ IceTipAddPackagesDialogPresenter >> defaultLayout [
 ]
 
 { #category : 'initialization' }
-IceTipAddPackagesDialogPresenter >> iconForWindow [
-
-	^ self iconNamed: #branch
-]
-
-{ #category : 'initialization' }
 IceTipAddPackagesDialogPresenter >> initializePackageNameText [
 
 	packageNameText
@@ -148,12 +142,6 @@ IceTipAddPackagesDialogPresenter >> setModelBeforeInitialization: anObject [
 ]
 
 { #category : 'initialization' }
-IceTipAddPackagesDialogPresenter >> titleForWindow [
-
-	^ 'Add packages'
-]
-
-{ #category : 'initialization' }
 IceTipAddPackagesDialogPresenter >> updatePresenter [
 
 	self refresh
@@ -165,4 +153,16 @@ IceTipAddPackagesDialogPresenter >> validate [
 	self
 		assert: self selectedPackage isNotNil
 		description: 'Please select a branch to checkout.'
+]
+
+{ #category : 'initialization' }
+IceTipAddPackagesDialogPresenter >> windowIcon [
+
+	^ self iconNamed: #branch
+]
+
+{ #category : 'initialization' }
+IceTipAddPackagesDialogPresenter >> windowTitle [
+
+	^ 'Add packages'
 ]

@@ -75,7 +75,7 @@ IceTipCheckoutBranchDialog >> setModelBeforeInitialization: anObject [
 ]
 
 { #category : 'initialization' }
-IceTipCheckoutBranchDialog >> titleForWindow [
+IceTipCheckoutBranchDialog >> windowTitle [
 
 	^ 'Checkout branch'
 ]

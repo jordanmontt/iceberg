@@ -120,12 +120,6 @@ IceTipBrowser >> hasSelectedItem [
 ]
 
 { #category : 'initialization' }
-IceTipBrowser >> iconForWindow [
-
-	^ self iconNamed: #komitterSmalltalkhubRemote
-]
-
-{ #category : 'initialization' }
 IceTipBrowser >> initialize [
 
 	super initialize.
@@ -267,4 +261,10 @@ IceTipBrowser >> subscribeToAnnouncements [
 IceTipBrowser >> toolbar [
 
 	^ toolbar
+]
+
+{ #category : 'initialization' }
+IceTipBrowser >> windowIcon [
+
+	^ self iconNamed: #komitterSmalltalkhubRemote
 ]

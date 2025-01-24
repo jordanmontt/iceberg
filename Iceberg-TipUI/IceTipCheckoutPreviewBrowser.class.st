@@ -129,7 +129,7 @@ IceTipCheckoutPreviewBrowser >> selectedCheckoutStrategy [
 ]
 
 { #category : 'initialization' }
-IceTipCheckoutPreviewBrowser >> titleForWindow [
+IceTipCheckoutPreviewBrowser >> windowTitle [
 
 	^ 'Preview checkout of {1}/{2}' format: { 
 		self model repositoryName.

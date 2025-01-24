@@ -406,12 +406,6 @@ IceGitHubCreatePullRequestPresenter >> requestGitRepositoryInfo [
 		  getRepository: remote owner project: remote projectBasename
 ]
 
-{ #category : 'specs' }
-IceGitHubCreatePullRequestPresenter >> titleForWindow [
-
-	^ 'New pull request'
-]
-
 { #category : 'accessing - ui' }
 IceGitHubCreatePullRequestPresenter >> titleLabel [
 
@@ -444,4 +438,10 @@ IceGitHubCreatePullRequestPresenter >> updatePresenter [
 		
 	titleTextInput text: self proposedTitle.
 	bodyText text: self proposedComment
+]
+
+{ #category : 'specs' }
+IceGitHubCreatePullRequestPresenter >> windowTitle [
+
+	^ 'New pull request'
 ]

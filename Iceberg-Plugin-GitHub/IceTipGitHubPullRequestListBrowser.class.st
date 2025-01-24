@@ -187,12 +187,6 @@ IceTipGitHubPullRequestListBrowser >> strongSelection: aSelection [
 	self viewPullRequest: aSelection selectedItem
 ]
 
-{ #category : 'initialization' }
-IceTipGitHubPullRequestListBrowser >> titleForWindow [
-
-	^ 'Pull requests on {1} ({2})' format: { self remote name. self remote url }
-]
-
 { #category : 'private' }
 IceTipGitHubPullRequestListBrowser >> updateSelectedPullRequest: aSpSingleSelectionMode [
 
@@ -214,4 +208,10 @@ IceTipGitHubPullRequestListBrowser >> viewPullRequest: aPullRequest [
 					model: self model
 					pullRequest: aPullRequest) 
 				open ]
+]
+
+{ #category : 'initialization' }
+IceTipGitHubPullRequestListBrowser >> windowTitle [
+
+	^ 'Pull requests on {1} ({2})' format: { self remote name. self remote url }
 ]

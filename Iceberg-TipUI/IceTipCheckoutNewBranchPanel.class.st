@@ -81,12 +81,6 @@ IceTipCheckoutNewBranchPanel >> icon [
 ]
 
 { #category : 'initialization' }
-IceTipCheckoutNewBranchPanel >> iconForWindow [
-
-	^ self icon
-]
-
-{ #category : 'initialization' }
 IceTipCheckoutNewBranchPanel >> initializeCurrentBranchLabel [
 
 	currentBranchLabel := self newLabel
@@ -120,12 +114,6 @@ IceTipCheckoutNewBranchPanel >> openDialog [
 		  open
 ]
 
-{ #category : 'initialization' }
-IceTipCheckoutNewBranchPanel >> titleForWindow [
-
-	^ 'New branch'
-]
-
 { #category : 'accessing' }
 IceTipCheckoutNewBranchPanel >> validate [
 
@@ -135,6 +123,18 @@ IceTipCheckoutNewBranchPanel >> validate [
 	self 
 		assert: (self branchName noneSatisfy: #isSeparator)
 		description: 'You can''t have spaces in your branch name.'
+]
+
+{ #category : 'initialization' }
+IceTipCheckoutNewBranchPanel >> windowIcon [
+
+	^ self icon
+]
+
+{ #category : 'initialization' }
+IceTipCheckoutNewBranchPanel >> windowTitle [
+
+	^ 'New branch'
 ]
 
 { #category : 'callbacks' }

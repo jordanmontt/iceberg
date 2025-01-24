@@ -65,7 +65,7 @@ IceTipRegisterRepositoryDialogPresenter >> onAccept: aBlock [
 ]
 
 { #category : 'initialization' }
-IceTipRegisterRepositoryDialogPresenter >> titleForWindow [
+IceTipRegisterRepositoryDialogPresenter >> windowTitle [
 
 	^ 'Register project'
 ]

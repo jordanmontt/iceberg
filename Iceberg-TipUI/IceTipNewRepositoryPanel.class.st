@@ -38,12 +38,6 @@ IceTipNewRepositoryPanel >> defaultLayout [
 ]
 
 { #category : 'initialization' }
-IceTipNewRepositoryPanel >> iconForWindow [
-
-	^ self iconNamed: #smallNew
-]
-
-{ #category : 'initialization' }
 IceTipNewRepositoryPanel >> initializePresenters [
 
 	super initializePresenters.
@@ -124,12 +118,6 @@ IceTipNewRepositoryPanel >> subdirectoryLabel [
 	^ subdirectoryLabel
 ]
 
-{ #category : 'initialization' }
-IceTipNewRepositoryPanel >> titleForWindow [
-
-	^ 'New repository'
-]
-
 { #category : 'accessing' }
 IceTipNewRepositoryPanel >> validate [
 
@@ -139,4 +127,16 @@ IceTipNewRepositoryPanel >> validate [
 	self
 		assert: self projectLocation location isNotNil  
 		description: 'Project location must be defined (if it does not exists, it will be created).'
+]
+
+{ #category : 'initialization' }
+IceTipNewRepositoryPanel >> windowIcon [
+
+	^ self iconNamed: #smallNew
+]
+
+{ #category : 'initialization' }
+IceTipNewRepositoryPanel >> windowTitle [
+
+	^ 'New repository'
 ]

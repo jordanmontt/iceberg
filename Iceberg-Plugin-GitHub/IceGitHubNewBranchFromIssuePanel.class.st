@@ -146,12 +146,6 @@ IceGitHubNewBranchFromIssuePanel >> selectRemoteModel [
 			on: self model entity ]
 ]
 
-{ #category : 'initialization' }
-IceGitHubNewBranchFromIssuePanel >> titleForWindow [
-
-	^ 'New branch from issue'
-]
-
 { #category : 'accessing' }
 IceGitHubNewBranchFromIssuePanel >> unknownTitle [
 
@@ -223,4 +217,10 @@ IceGitHubNewBranchFromIssuePanel >> wait: time thenDo: aBlock [
 			time wait.
 			aBlock value ] 
 		forkNamed: 'GitHub issue tracker'
+]
+
+{ #category : 'initialization' }
+IceGitHubNewBranchFromIssuePanel >> windowTitle [
+
+	^ 'New branch from issue'
 ]

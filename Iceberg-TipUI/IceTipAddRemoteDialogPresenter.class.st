@@ -116,12 +116,6 @@ IceTipAddRemoteDialogPresenter >> setModelBeforeInitialization: anObject [
 	model := anObject
 ]
 
-{ #category : 'initialization' }
-IceTipAddRemoteDialogPresenter >> titleForWindow [
-
-	^ 'Add remote'
-]
-
 { #category : 'accessing - ui' }
 IceTipAddRemoteDialogPresenter >> urlLabel [
 
@@ -144,4 +138,10 @@ IceTipAddRemoteDialogPresenter >> validate [
 		assert: self remoteUrl isNotEmpty
 		description: 'You need to specify a remote url.'
 
+]
+
+{ #category : 'initialization' }
+IceTipAddRemoteDialogPresenter >> windowTitle [
+
+	^ 'Add remote'
 ]

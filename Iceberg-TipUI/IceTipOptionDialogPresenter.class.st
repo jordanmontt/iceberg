@@ -91,8 +91,8 @@ IceTipOptionDialogPresenter >> initializeTypeList [
 
 	(typeList := self newList)
 		items: self allTypes;
-		display: [ :aType | aType titleForWindow ];
-		displayIcon: [ :aType | aType iconForWindow ];
+		display: [ :aType | aType windowTitle ];
+		displayIcon: [ :aType | aType windowIcon ];
 		whenSelectionChangedDo: [ :selection | 
 			self selectionChanged: selection selectedItem ]		
 ]
@@ -129,5 +129,5 @@ IceTipOptionDialogPresenter >> typeList [
 { #category : 'private' }
 IceTipOptionDialogPresenter >> updateWindowTitle [
 	
-	self window title: type titleForWindow
+	self window title: type windowTitle
 ]

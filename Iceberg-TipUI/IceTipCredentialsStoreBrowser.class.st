@@ -106,15 +106,15 @@ IceTipCredentialsStoreBrowser >> store [
 ]
 
 { #category : 'initialization' }
-IceTipCredentialsStoreBrowser >> titleForWindow [
+IceTipCredentialsStoreBrowser >> updatePresenter [
+
+	self refresh
+]
+
+{ #category : 'initialization' }
+IceTipCredentialsStoreBrowser >> windowTitle [
 
 	^ model isCurrent
 		  ifTrue: [ 'Current Iceberg credentials' ]
 		  ifFalse: [ 'Credentials of ' , model printString ]
-]
-
-{ #category : 'initialization' }
-IceTipCredentialsStoreBrowser >> updatePresenter [
-
-	self refresh
 ]

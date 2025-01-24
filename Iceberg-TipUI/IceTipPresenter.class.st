@@ -45,25 +45,6 @@ IceTipPresenter >> decorations [
 ]
 
 { #category : 'initialization' }
-IceTipPresenter >> iconForWindow [
-	"Answer a Form to be used during initialization when opening in a SpWindowPresenter."
-
-	^ self iconNamed: #smallWindow
-]
-
-{ #category : 'initialization' }
-IceTipPresenter >> initializeWindow: aSpWindowPresenter [
-
-	super initializeWindow: aSpWindowPresenter.
-
-	self setTitleTo: aSpWindowPresenter.
-	self setWindowIconTo: aSpWindowPresenter.
-	"self setInitialExtentTo: aSpWindowPresenter."
-
-
-]
-
-{ #category : 'initialization' }
 IceTipPresenter >> setInitialExtentTo: aSpWindowPresenter [
 	
 	aSpWindowPresenter initialExtent: self initialExtentForWindow
@@ -72,26 +53,18 @@ IceTipPresenter >> setInitialExtentTo: aSpWindowPresenter [
 { #category : 'initialization' }
 IceTipPresenter >> setTitleTo: aSpWindowPresenter [
 
-	aSpWindowPresenter title: self titleForWindow
-]
-
-{ #category : 'initialization' }
-IceTipPresenter >> setWindowIconTo: aSpWindowPresenter [
-	
-	aSpWindowPresenter windowIcon: self iconForWindow
-]
-
-{ #category : 'initialization' }
-IceTipPresenter >> titleForWindow [
-	"Answer the title to use during initialization when this presenter is being opened 
-	in a SpWindowPresenter."
-
-	^ self subclassResponsibility
-
+	aSpWindowPresenter title: self windowTitle
 ]
 
 { #category : 'extensions' }
 IceTipPresenter >> updateTitle [
 	
-	self withWindowDo: [ :aWindow | aWindow title: self titleForWindow ]
+	self withWindowDo: [ :aWindow | aWindow title: self windowTitle ]
+]
+
+{ #category : 'initialization' }
+IceTipPresenter >> windowIcon [
+	"Answer a Form to be used during initialization when opening in a SpWindowPresenter."
+
+	^ self iconNamed: #smallWindow
 ]

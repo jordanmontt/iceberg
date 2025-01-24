@@ -84,14 +84,14 @@ IceTipMergeBranchDialogPresenter >> setModelBeforeInitialization: anObject [
 	model := anObject
 ]
 
-{ #category : 'initialization' }
-IceTipMergeBranchDialogPresenter >> titleForWindow [
-
-	^ 'Select branch to merge into ' , (self model branchName contractTo: 45)
-]
-
 { #category : 'activation' }
 IceTipMergeBranchDialogPresenter >> updateWindowTitle [
 
-	self window title: self titleForWindow
+	self window title: self windowTitle
+]
+
+{ #category : 'initialization' }
+IceTipMergeBranchDialogPresenter >> windowTitle [
+
+	^ 'Select branch to merge into ' , (self model branchName contractTo: 45)
 ]

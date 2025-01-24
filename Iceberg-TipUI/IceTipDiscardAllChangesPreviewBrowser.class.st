@@ -60,7 +60,7 @@ IceTipDiscardAllChangesPreviewBrowser >> newActionButton [
 ]
 
 { #category : 'initialization' }
-IceTipDiscardAllChangesPreviewBrowser >> titleForWindow [
+IceTipDiscardAllChangesPreviewBrowser >> windowTitle [
 	
 	^ 'Preview Changes to Discard'
 ]

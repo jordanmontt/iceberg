@@ -165,7 +165,7 @@ IceTipRepairRepositoryDialogPresenter >> setModelBeforeInitialization: anObject 
 ]
 
 { #category : 'initialization' }
-IceTipRepairRepositoryDialogPresenter >> titleForWindow [
+IceTipRepairRepositoryDialogPresenter >> windowTitle [
 
 	^ 'Repair repository'
 ]

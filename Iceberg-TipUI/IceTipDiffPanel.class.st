@@ -273,12 +273,6 @@ IceTipDiffPanel >> subscribeToAnnouncements [
 		to: self
 ]
 
-{ #category : 'initialization' }
-IceTipDiffPanel >> titleForWindow [
-
-	^ 'Diff'
-]
-
 { #category : 'accessing - ui' }
 IceTipDiffPanel >> treeActions: anActionGroup [ 
 
@@ -292,4 +286,10 @@ IceTipDiffPanel >> treeActions: anActionGroup [
 IceTipDiffPanel >> updatePresenter [
 
 	self basicRefresh
+]
+
+{ #category : 'initialization' }
+IceTipDiffPanel >> windowTitle [
+
+	^ 'Diff'
 ]

@@ -35,7 +35,7 @@ IceTipEditTokenCredentialsPresenter >> refreshPresenterFromCredentials [
 ]
 
 { #category : 'initialization' }
-IceTipEditTokenCredentialsPresenter >> titleForWindow [
+IceTipEditTokenCredentialsPresenter >> windowTitle [
 
 	^ 'Edit token credentials'
 ]

@@ -123,12 +123,6 @@ IceGitHubAcceptPullRequestPresenter >> onAccept: aBlock [
 	acceptBlock := aBlock
 ]
 
-{ #category : 'specs' }
-IceGitHubAcceptPullRequestPresenter >> titleForWindow [
-
-	^ 'Accept pull request'
-]
-
 { #category : 'accessing' }
 IceGitHubAcceptPullRequestPresenter >> type [
 
@@ -145,4 +139,10 @@ IceGitHubAcceptPullRequestPresenter >> typeLabel [
 IceGitHubAcceptPullRequestPresenter >> typeList [
 
 	^ typeList
+]
+
+{ #category : 'specs' }
+IceGitHubAcceptPullRequestPresenter >> windowTitle [
+
+	^ 'Accept pull request'
 ]

@@ -69,7 +69,7 @@ IceTipAddSSHCredentialsPresenter >> newCredentials [
 ]
 
 { #category : 'initialization' }
-IceTipAddSSHCredentialsPresenter >> titleForWindow [
+IceTipAddSSHCredentialsPresenter >> windowTitle [
 
 	^ 'Add SSH credential'
 ]

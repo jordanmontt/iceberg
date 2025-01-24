@@ -160,12 +160,6 @@ IceTipRepositoriesBrowser >> hasSelectedItem [
 ]
 
 { #category : 'initialization' }
-IceTipRepositoriesBrowser >> iconForWindow [
-
-	^ self class iconForWorldMenu
-]
-
-{ #category : 'initialization' }
 IceTipRepositoriesBrowser >> initializePresenters [
 
 	notifyPanel := self newPresenter.
@@ -268,12 +262,6 @@ IceTipRepositoriesBrowser >> subscribeToAnnouncements [
 ]
 
 { #category : 'initialization' }
-IceTipRepositoriesBrowser >> titleForWindow [
-
-	^ 'Repositories'
-]
-
-{ #category : 'initialization' }
 IceTipRepositoriesBrowser >> updatePresenter [
 
 	LGitLibrary uniqueInstance isAvailable 
@@ -294,4 +282,16 @@ IceTipRepositoriesBrowser >> updatePresenter [
 IceTipRepositoriesBrowser >> visibleRootCommandsGroup [
 
 	^ self rootCommandsGroup
+]
+
+{ #category : 'initialization' }
+IceTipRepositoriesBrowser >> windowIcon [
+
+	^ self class iconForWorldMenu
+]
+
+{ #category : 'initialization' }
+IceTipRepositoriesBrowser >> windowTitle [
+
+	^ 'Repositories'
 ]

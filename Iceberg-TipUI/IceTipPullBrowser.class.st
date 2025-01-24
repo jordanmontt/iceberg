@@ -49,7 +49,7 @@ IceTipPullBrowser >> newActionButton [
 ]
 
 { #category : 'initialization' }
-IceTipPullBrowser >> titleForWindow [
+IceTipPullBrowser >> windowTitle [
 
 	^ 'Pull {1}/{2} from {3}' format: { 
 		self model repositoryName.
