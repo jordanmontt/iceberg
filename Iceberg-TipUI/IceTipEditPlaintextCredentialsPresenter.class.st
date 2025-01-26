@@ -48,7 +48,7 @@ IceTipEditPlaintextCredentialsPresenter >> refreshPresenterFromCredentials [
 ]
 
 { #category : 'initialization' }
-IceTipEditPlaintextCredentialsPresenter >> titleForWindow [
+IceTipEditPlaintextCredentialsPresenter >> windowTitle [
 
 	^ 'Edit credential for ' , credentials host
 ]

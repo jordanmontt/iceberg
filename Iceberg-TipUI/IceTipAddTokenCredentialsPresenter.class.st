@@ -99,12 +99,6 @@ IceTipAddTokenCredentialsPresenter >> newCredentials [
 		yourself 
 ]
 
-{ #category : 'initialization' }
-IceTipAddTokenCredentialsPresenter >> titleForWindow [
-
-	^ 'Add token credentials'
-]
-
 { #category : 'accessing' }
 IceTipAddTokenCredentialsPresenter >> tokenFromInput [
 	
@@ -115,4 +109,10 @@ IceTipAddTokenCredentialsPresenter >> tokenFromInput [
 IceTipAddTokenCredentialsPresenter >> usernameFromInput [
 	
 	^ usernameInput text
+]
+
+{ #category : 'initialization' }
+IceTipAddTokenCredentialsPresenter >> windowTitle [
+
+	^ 'Add token credentials'
 ]

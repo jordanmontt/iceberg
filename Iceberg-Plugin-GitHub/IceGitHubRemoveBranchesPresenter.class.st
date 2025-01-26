@@ -124,16 +124,16 @@ IceGitHubRemoveBranchesPresenter >> timeSinceLastCommit: branch [
 		^ '{1} days' format: {(Date today - lastCommitDate) days}
 ]
 
-{ #category : 'initialization' }
-IceGitHubRemoveBranchesPresenter >> titleForWindow [
-
-	^ 'Select branches to remove on remote {1}' format:
-		  { self remote name }
-]
-
 { #category : 'private' }
 IceGitHubRemoveBranchesPresenter >> triggerAcceptAction [
 		
 	acceptBlock ifNil: [ ^ self ].
 	acceptBlock value: selectedItems
+]
+
+{ #category : 'initialization' }
+IceGitHubRemoveBranchesPresenter >> windowTitle [
+
+	^ 'Select branches to remove on remote {1}' format:
+		  { self remote name }
 ]

@@ -50,7 +50,7 @@ IceTipPushBrowser >> newActionButton [
 ]
 
 { #category : 'initialization' }
-IceTipPushBrowser >> titleForWindow [
+IceTipPushBrowser >> windowTitle [
 
 	^ 'Push {1}/{2} to {3}' format: { 
 		self model repositoryName.

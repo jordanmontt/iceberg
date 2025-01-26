@@ -96,7 +96,7 @@ IceTipErrorDialogPresenter >> setModelBeforeInitialization: aDomainObject [
 ]
 
 { #category : 'initialization' }
-IceTipErrorDialogPresenter >> titleForWindow [
+IceTipErrorDialogPresenter >> windowTitle [
 
 	^ 'Error'
 ]

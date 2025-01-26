@@ -37,12 +37,6 @@ IceTipGitRepositoryPanel >> extractProjectName: aString [
 ]
 
 { #category : 'initialization' }
-IceTipGitRepositoryPanel >> iconForWindow [
-
-	^ self iconNamed: #git
-]
-
-{ #category : 'initialization' }
 IceTipGitRepositoryPanel >> initializePresenters [
 
 	super initializePresenters.
@@ -74,12 +68,6 @@ IceTipGitRepositoryPanel >> remoteUrl [
 	^ self remoteInputText text asString trimmed
 ]
 
-{ #category : 'initialization' }
-IceTipGitRepositoryPanel >> titleForWindow [
-
-	^ 'Clone remote repository'
-]
-
 { #category : 'accessing' }
 IceTipGitRepositoryPanel >> validate [
 
@@ -95,4 +83,16 @@ IceTipGitRepositoryPanel >> validate [
 		assert: self projectLocation location isNotNil
 		description:
 		'Project location must be defined (if it does not exists, it will be created).'
+]
+
+{ #category : 'initialization' }
+IceTipGitRepositoryPanel >> windowIcon [
+
+	^ self iconNamed: #git
+]
+
+{ #category : 'initialization' }
+IceTipGitRepositoryPanel >> windowTitle [
+
+	^ 'Clone remote repository'
 ]

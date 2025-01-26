@@ -52,7 +52,7 @@ IceTipAskForPlaintextCredentialsPresenter >> defaultLayout [
 ]
 
 { #category : 'initialization' }
-IceTipAskForPlaintextCredentialsPresenter >> titleForWindow [
+IceTipAskForPlaintextCredentialsPresenter >> windowTitle [
 
 	^ 'Please log in to ' , askingHostname
 ]

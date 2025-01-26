@@ -17,7 +17,7 @@ Class {
 IceTipRemovePackageDialogPresenter class >> defaultPreferredExtent [
 
 	^ (500 @ (self inputTextHeight * 2 + self buttonHeight + 75))
-		  scaledByDisplayScaleFactor "Yes, a magic number"
+		 
 ]
 
 { #category : 'actions' }
@@ -106,14 +106,14 @@ IceTipRemovePackageDialogPresenter >> setModelBeforeInitialization: anObject [
 	model := anObject
 ]
 
-{ #category : 'initialization' }
-IceTipRemovePackageDialogPresenter >> titleForWindow [
-
-	^ 'Remove Package'
-]
-
 { #category : 'accessing' }
 IceTipRemovePackageDialogPresenter >> unloadFromImageCheckbox [
 
 	^ unloadFromImageCheckbox
+]
+
+{ #category : 'initialization' }
+IceTipRemovePackageDialogPresenter >> windowTitle [
+
+	^ 'Remove Package'
 ]

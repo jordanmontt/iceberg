@@ -36,12 +36,6 @@ IceTipLocalRepositoryPanel >> defaultLayout [
 		yourself
 ]
 
-{ #category : 'initialization' }
-IceTipLocalRepositoryPanel >> iconForWindow [
-
-	^ self iconNamed: #smallOpen
-]
-
 { #category : 'testing' }
 IceTipLocalRepositoryPanel >> isLocalRepository [
 
@@ -74,12 +68,6 @@ IceTipLocalRepositoryPanel >> newRepository [
 
 ]
 
-{ #category : 'initialization' }
-IceTipLocalRepositoryPanel >> titleForWindow [
-
-	^ 'Import from existing clone'
-]
-
 { #category : 'accessing' }
 IceTipLocalRepositoryPanel >> validate [
 
@@ -90,4 +78,16 @@ IceTipLocalRepositoryPanel >> validate [
 		assert: self location exists
 		description: 'Project location must exist!'
 
+]
+
+{ #category : 'initialization' }
+IceTipLocalRepositoryPanel >> windowIcon [
+
+	^ self iconNamed: #smallOpen
+]
+
+{ #category : 'initialization' }
+IceTipLocalRepositoryPanel >> windowTitle [
+
+	^ 'Import from existing clone'
 ]

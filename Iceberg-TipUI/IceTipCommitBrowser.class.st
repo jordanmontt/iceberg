@@ -242,14 +242,6 @@ IceTipCommitBrowser >> subscribeToAnnouncements [
 		to: self
 ]
 
-{ #category : 'initialization' }
-IceTipCommitBrowser >> titleForWindow [
-
-	^ 'Commit on {1} branch {2}' format: { 
-			  self repositoryModel name.
-			  self repositoryModel branchName }
-]
-
 { #category : 'private' }
 IceTipCommitBrowser >> verifyNeedsRefreshOrClose [
 	"Verifies if there are remaining changes to commit. 
@@ -262,6 +254,14 @@ IceTipCommitBrowser >> verifyNeedsRefreshOrClose [
 	diffPanel model isEmpty ifTrue: [ ^ self closeWindow ].
 	self commentPanel clear.
 	diffPanel basicRefresh
+]
+
+{ #category : 'initialization' }
+IceTipCommitBrowser >> windowTitle [
+
+	^ 'Commit on {1} branch {2}' format: { 
+			  self repositoryModel name.
+			  self repositoryModel branchName }
 ]
 
 { #category : 'accessing' }

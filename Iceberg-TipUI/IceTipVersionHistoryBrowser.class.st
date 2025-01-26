@@ -206,15 +206,15 @@ IceTipVersionHistoryBrowser >> selectionChanged: aSelectedItem [
 ]
 
 { #category : 'initialization' }
-IceTipVersionHistoryBrowser >> titleForWindow [
+IceTipVersionHistoryBrowser >> updatePresenter [
+
+	self refresh
+]
+
+{ #category : 'initialization' }
+IceTipVersionHistoryBrowser >> windowTitle [
 
 	^ self model  
 		ifNotNil: [ 'Versions of {1}' format: { self model name } ]
 		ifNil: [ 'Versions' ]
-]
-
-{ #category : 'initialization' }
-IceTipVersionHistoryBrowser >> updatePresenter [
-
-	self refresh
 ]

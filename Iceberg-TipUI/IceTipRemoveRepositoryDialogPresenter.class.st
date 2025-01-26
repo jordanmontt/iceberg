@@ -105,7 +105,7 @@ IceTipRemoveRepositoryDialogPresenter >> setModelBeforeInitialization: anObject 
 ]
 
 { #category : 'initialization' }
-IceTipRemoveRepositoryDialogPresenter >> titleForWindow [
+IceTipRemoveRepositoryDialogPresenter >> windowTitle [
 
 	^ 'Remove repository'
 ]

@@ -171,15 +171,6 @@ IceTipHistoryBrowser >> selectionChanged: anElement [
 ]
 
 { #category : 'initialization' }
-IceTipHistoryBrowser >> titleForWindow [
-
-	^ self model
-		ifNotNil: [ 'History of {1}' format: {self model repositoryName} ]
-		ifNil: [ 'History' ]
-
-]
-
-{ #category : 'initialization' }
 IceTipHistoryBrowser >> updatePresenter [
 
 	self refresh
@@ -189,4 +180,13 @@ IceTipHistoryBrowser >> updatePresenter [
 IceTipHistoryBrowser >> whenSelectionChangedDo: aBlock [ 
 	
 	commitList whenSelectionChangedDo: aBlock
+]
+
+{ #category : 'initialization' }
+IceTipHistoryBrowser >> windowTitle [
+
+	^ self model
+		ifNotNil: [ 'History of {1}' format: {self model repositoryName} ]
+		ifNil: [ 'History' ]
+
 ]

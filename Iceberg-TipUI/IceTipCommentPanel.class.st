@@ -236,7 +236,7 @@ IceTipCommentPanel >> setModelBeforeInitialization: aRepositoryModel [
 ]
 
 { #category : 'specs' }
-IceTipCommentPanel >> titleForWindow [
+IceTipCommentPanel >> windowTitle [
 
 	^ 'Comment'
 ]

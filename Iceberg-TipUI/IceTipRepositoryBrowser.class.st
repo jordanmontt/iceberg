@@ -198,13 +198,13 @@ IceTipRepositoryBrowser >> subscribeToAnnouncements [
 ]
 
 { #category : 'initialization' }
-IceTipRepositoryBrowser >> titleForWindow [
-
-	^ 'Repository of ' , self model name
-]
-
-{ #category : 'initialization' }
 IceTipRepositoryBrowser >> updatePresenter [
 
 	self refresh
+]
+
+{ #category : 'initialization' }
+IceTipRepositoryBrowser >> windowTitle [
+
+	^ 'Repository of ' , self model name
 ]

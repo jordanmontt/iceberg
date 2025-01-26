@@ -38,12 +38,6 @@ IceTipGitHubRepositoryPanel >> getGitHubRepository [
 			error pass ]
 ]
 
-{ #category : 'initialization' }
-IceTipGitHubRepositoryPanel >> iconForWindow [
-
-	^ (self iconNamed: #github) lighter: 0.50 "just to be sure is visible in all themes"
-]
-
 { #category : 'accessing' }
 IceTipGitHubRepositoryPanel >> newRepository [
 
@@ -73,7 +67,13 @@ IceTipGitHubRepositoryPanel >> providerName [
 ]
 
 { #category : 'initialization' }
-IceTipGitHubRepositoryPanel >> titleForWindow [
+IceTipGitHubRepositoryPanel >> windowIcon [
+
+	^ (self iconNamed: #github) lighter: 0.50 "just to be sure is visible in all themes"
+]
+
+{ #category : 'initialization' }
+IceTipGitHubRepositoryPanel >> windowTitle [
 
 	^ 'Clone from github.com'
 ]

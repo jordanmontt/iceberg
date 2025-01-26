@@ -54,7 +54,7 @@ IceTipEditSSHCredentialsPresenter >> refreshPresenterFromCredentials [
 ]
 
 { #category : 'initialization' }
-IceTipEditSSHCredentialsPresenter >> titleForWindow [
+IceTipEditSSHCredentialsPresenter >> windowTitle [
 
 	^ 'Edit SSH keys for ' , self credentials hostDescription
 ]

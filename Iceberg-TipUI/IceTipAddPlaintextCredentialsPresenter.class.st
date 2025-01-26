@@ -61,7 +61,7 @@ IceTipAddPlaintextCredentialsPresenter >> isOkEnabled [
 ]
 
 { #category : 'initialization' }
-IceTipAddPlaintextCredentialsPresenter >> titleForWindow [
+IceTipAddPlaintextCredentialsPresenter >> windowTitle [
 
 	^ 'Add new Plain Text Credential'
 ]

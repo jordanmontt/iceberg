@@ -285,15 +285,15 @@ IceGitHubTipPullRequestBrowser >> setModelBeforeInitialization: aModel [
 	self repositoryModel: aModel
 ]
 
-{ #category : 'accessing' }
-IceGitHubTipPullRequestBrowser >> titleForWindow [
-
-	^ 'Browsing pull request: #{1} {2}' format: { self pullRequest number. self pullRequest title }
-
-]
-
 { #category : 'initialization' }
 IceGitHubTipPullRequestBrowser >> updatePresenter [
 
 	self refresh
+]
+
+{ #category : 'accessing' }
+IceGitHubTipPullRequestBrowser >> windowTitle [
+
+	^ 'Browsing pull request: #{1} {2}' format: { self pullRequest number. self pullRequest title }
+
 ]

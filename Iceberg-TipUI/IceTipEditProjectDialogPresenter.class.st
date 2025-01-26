@@ -26,7 +26,7 @@ Class {
 { #category : 'accessing' }
 IceTipEditProjectDialogPresenter class >> defaultPreferredExtent [
 
-	^ (475 @ 525) scaledByDisplayScaleFactor
+	^ (475 @ 525)
 ]
 
 { #category : 'actions' }
@@ -387,12 +387,6 @@ IceTipEditProjectDialogPresenter >> sourceDirectoryTree [
 	^ sourceDirectoryTree
 ]
 
-{ #category : 'initialization' }
-IceTipEditProjectDialogPresenter >> titleForWindow [
-
-	^ 'Edit Project'
-]
-
 { #category : 'accessing' }
 IceTipEditProjectDialogPresenter >> username [
 
@@ -406,4 +400,10 @@ IceTipEditProjectDialogPresenter >> warningMessage [
 Changing the format in here will not migrate your code to another format.
 
 If you want to migrate your code from Filetree to Tonel, use the migration option in the context menu (Extra >> Convert repository sources to Tonel).'
+]
+
+{ #category : 'initialization' }
+IceTipEditProjectDialogPresenter >> windowTitle [
+
+	^ 'Edit Project'
 ]

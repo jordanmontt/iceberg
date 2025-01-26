@@ -124,7 +124,7 @@ IceGitHubRejectPullRequestPresenter >> onAccept: aBlock [
 ]
 
 { #category : 'specs' }
-IceGitHubRejectPullRequestPresenter >> titleForWindow [
+IceGitHubRejectPullRequestPresenter >> windowTitle [
 
 	^ 'Reject pull request'
 ]

@@ -48,12 +48,6 @@ IceTipExistingBranchPanel >> icon: anIcon [
 ]
 
 { #category : 'initialization' }
-IceTipExistingBranchPanel >> iconForWindow [
-
-	^ self icon
-]
-
-{ #category : 'initialization' }
 IceTipExistingBranchPanel >> initializeBranchesList [
 
 	branchesList
@@ -89,12 +83,6 @@ IceTipExistingBranchPanel >> shortDescriptionFor: aBranch [
 	^aBranch shortDescription , ' (current)'
 ]
 
-{ #category : 'initialization' }
-IceTipExistingBranchPanel >> titleForWindow [
-
-	^ title ifNil: [ self model name ]
-]
-
 { #category : 'accessing - ui' }
 IceTipExistingBranchPanel >> titleForWindow: aString [
 
@@ -106,4 +94,16 @@ IceTipExistingBranchPanel >> validate [
 
 	self selectedBranch ifNil: [ 
 		IceError signal: 'Please select a branch to checkout.' ]
+]
+
+{ #category : 'initialization' }
+IceTipExistingBranchPanel >> windowIcon [
+
+	^ self icon
+]
+
+{ #category : 'initialization' }
+IceTipExistingBranchPanel >> windowTitle [
+
+	^ title ifNil: [ self model name ]
 ]

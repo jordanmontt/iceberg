@@ -246,15 +246,15 @@ IceTipWorkingCopyBrowser >> subscribeToAnnouncements [
 ]
 
 { #category : 'initialization' }
-IceTipWorkingCopyBrowser >> titleForWindow [
-
-	^ 'Working copy of ', self model repositoryName
-]
-
-{ #category : 'initialization' }
 IceTipWorkingCopyBrowser >> updatePresenter [
 
 	self refresh
+]
+
+{ #category : 'initialization' }
+IceTipWorkingCopyBrowser >> windowTitle [
+
+	^ 'Working copy of ', self model repositoryName
 ]
 
 { #category : 'accessing' }

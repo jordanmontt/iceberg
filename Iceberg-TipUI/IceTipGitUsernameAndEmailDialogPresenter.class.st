@@ -133,14 +133,14 @@ IceTipGitUsernameAndEmailDialogPresenter >> setModelBeforeInitialization: anObje
 	model := anObject
 ]
 
-{ #category : 'initialization' }
-IceTipGitUsernameAndEmailDialogPresenter >> titleForWindow [
-
-	^ 'Please provide Git missing properties'
-]
-
 { #category : 'accessing' }
 IceTipGitUsernameAndEmailDialogPresenter >> username [
 
 	^ self nameInput text trimBoth
+]
+
+{ #category : 'initialization' }
+IceTipGitUsernameAndEmailDialogPresenter >> windowTitle [
+
+	^ 'Please provide Git missing properties'
 ]

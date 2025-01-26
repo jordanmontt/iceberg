@@ -52,7 +52,7 @@ IceTipMergePreviewBrowser >> newActionButton [
 ]
 
 { #category : 'initialization' }
-IceTipMergePreviewBrowser >> titleForWindow [
+IceTipMergePreviewBrowser >> windowTitle [
 
 	^ 'Preview merge of {1}/{2}' format: { 
 		self model repositoryName.

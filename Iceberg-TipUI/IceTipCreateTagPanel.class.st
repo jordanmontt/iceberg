@@ -99,12 +99,6 @@ IceTipCreateTagPanel >> existingTagsList [
 ]
 
 { #category : 'initialization' }
-IceTipCreateTagPanel >> iconForWindow [
-
-	^ self iconNamed: #smallNew
-]
-
-{ #category : 'initialization' }
 IceTipCreateTagPanel >> initializeCurrentBranchLabel [
 
 	currentCommitishLabel := self newLabel
@@ -261,12 +255,6 @@ IceTipCreateTagPanel >> tagNameLabel [
 	^ tagNameLabel
 ]
 
-{ #category : 'initialization' }
-IceTipCreateTagPanel >> titleForWindow [
-
-	^ 'New tag of ' , commitishToTag name
-]
-
 { #category : 'accessing' }
 IceTipCreateTagPanel >> validate [
 
@@ -276,6 +264,18 @@ IceTipCreateTagPanel >> validate [
 	self 
 		assert: (self tagName noneSatisfy: #isSeparator)
 		description: 'You can''t have spaces in your tag name.'
+]
+
+{ #category : 'initialization' }
+IceTipCreateTagPanel >> windowIcon [
+
+	^ self iconNamed: #smallNew
+]
+
+{ #category : 'initialization' }
+IceTipCreateTagPanel >> windowTitle [
+
+	^ 'New tag of ' , commitishToTag name
 ]
 
 { #category : 'callbacks' }
