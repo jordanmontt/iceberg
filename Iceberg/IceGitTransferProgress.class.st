@@ -38,7 +38,7 @@ IceGitTransferProgress >> initialize [
 	self initializeBlock
 ]
 
-{ #category : 'initialize-release' }
+{ #category : 'initialization' }
 IceGitTransferProgress >> initializeBlock [
 	self signature: self class fnSpec block: self block.
 ]
