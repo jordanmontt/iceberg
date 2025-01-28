@@ -15,7 +15,7 @@ IceLibgitFiletreeSnapshotWriter >> fileUtils [
 	^ IceLibgitFiletreeFileUtils
 ]
 
-{ #category : 'initialize-release' }
+{ #category : 'initialization' }
 IceLibgitFiletreeSnapshotWriter >> propertyFileExtension [
   ^ MCFileTreeRepository defaultPropertyFileExtension
 ]
