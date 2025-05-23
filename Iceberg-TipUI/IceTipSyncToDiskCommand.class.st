@@ -38,6 +38,8 @@ IceTipSyncToDiskCommand >> doCommit: aCollection [
 IceTipSyncToDiskCommand >> execute [
 
 	| changes aDiff|
+	
+	self isConfirmed ifFalse: [ ^self ].
 	changes := Set new.
 	aDiff := context workingCopyModel diffToReferenceCommit.
 	aDiff treeRoots do: [ :root |
@@ -63,4 +65,15 @@ self copyWithOnly: col."
 IceTipSyncToDiskCommand >> iconName [
 
 	^ #smallSave
+]
+
+{ #category : 'testing' }
+IceTipSyncToDiskCommand >> isConfirmed [
+
+	^ self application newConfirm
+		  	title: 'Proceed?';
+			label: 
+		  'This operation aims to synchronize your image changes to your disk without doing any git operation';
+			openModal 
+		 
 ]
